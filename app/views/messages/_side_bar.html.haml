@@ -2,13 +2,13 @@
   .side__top
     .side__top__box
       .side__top__box__name
-        祐也
+        = current_user.name
       %ul.side__top__box__IconList
         %li.side__top__box__IconList__edit
           = link_to "#" do
             %i.fas.fa-edit
         %li.side__top__box__IconList__cog
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
   .side__groups
     .side__groups__box
