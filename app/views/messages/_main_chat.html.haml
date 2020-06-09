@@ -1,0 +1,28 @@
+.main
+  .main__top
+    .main__top__group
+      .main__top__group__list
+        テックキャンプ
+        %ul.main__top__group__list__menber
+          Member:
+          %li.main__top__group__menber__list__menber__name
+            祐也
+    = link_to "#" ,class:"edit" do
+      Edit
+  .main__massage
+    .main__massage__box
+      .main__massage__box__info
+        .main__massage__box__info__name
+          祐也
+        .main__massage__box__info__time
+          2020年６月８日21時12分
+      %p.main__massage__box__content
+        こんにちは
+  .form
+    %form.new__message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value:"Send"}
