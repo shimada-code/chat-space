@@ -163,13 +163,16 @@
         height: 105px;
         width: 260px;
         font-size: 15px;
+        .group-box{
+          text-decoration: none;
+          color: #ffffff;
+        }
         &__name{
           background-color: #2f3e51;
-          color: #ffffff;
+          text-decoration: none;
         }
         &__message{
           background-color: #2f3e51;
-          color: #ffffff;
           margin-top: 5px;
           font-size: 11px;
         }
