@@ -4,7 +4,7 @@
       .main__top__group__list
         = @group.name
         %ul.main__top__group__list__menber
-          Member:
+          Member：
           %li.main__top__group__menber__list__menber__name
             - @group.users.each do|user|
               =user.name
