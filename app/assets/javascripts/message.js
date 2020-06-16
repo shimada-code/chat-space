@@ -52,16 +52,18 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .always(function(data){
+    .done(function(data){
       let html = buildHTML(data);
       $('.MessageField').append(html);
       $('form')[0].reset();
       $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
-      $('.submit-btn').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-    });
+    })
+    .always(function() {
+      $('.submit-btn').prop('disabled', false);
+    })
   });
 });
 
