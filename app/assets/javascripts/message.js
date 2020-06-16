@@ -52,7 +52,7 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
+    .always(function(data){
       let html = buildHTML(data);
       $('.MessageField').append(html);
       $('form')[0].reset();
@@ -60,7 +60,7 @@ $(function(){
       $('.submit-btn').prop('disabled', false);
     })
     .fail(function() {
-      alert("メッセージ送信に失敗しました")
+      alert("メッセージ送信に失敗しました");
     });
   });
 });
