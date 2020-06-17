@@ -3,9 +3,9 @@
     .main__top__group
       .main__top__group__list
         = @group.name
-        %ul.main__top__group__list__menber
+        %ul.main__top__group__list__member
           Member：
-          %li.main__top__group__menber__list__menber__name
+          %li.main__top__group__menber__list__member__name
             - @group.users.each do|user|
               =user.name
     = link_to "Edit", edit_group_path(@group) ,class: "edit"
